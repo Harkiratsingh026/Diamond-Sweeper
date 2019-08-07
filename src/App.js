@@ -23,19 +23,19 @@ class App extends React.Component {
   }
 
   handleClick(e){
-    console.log(e);
-    if(e.target.dataset.value === "*"){
-      this.state.starCount++;
+    if(!this.state.scoreDisplayed){
+      if(e.target.dataset.value === "*"){
+        this.state.starCount++;
+      }
+      if(e.target.innerText !== e.target.dataset.value){
+        e.target.innerText = e.target.dataset.value;
+        this.state.score--;
+      }
+      if(this.state.starCount === 2){
+        this.state.scoreDisplayed = true;
+        console.log(this.state.score);
+      }
     }
-    if(e.target.innerText !== e.target.dataset.value){
-      e.target.innerText = e.target.dataset.value;
-      this.state.score--;
-    }
-    if(this.state.starCount === 8 && !this.state.scoreDisplayed){
-      this.state.scoreDisplayed = true;
-      console.log(this.state.score);
-    }
-    debugger;
   }
 
   render(){
