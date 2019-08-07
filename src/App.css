@@ -1,0 +1,23 @@
+.App {
+  padding-left: 28%;
+  padding-top: 10%;
+}
+.Table {
+  border: 1px solid black;
+  width: 70%;
+}
+
+.Data {
+  border: 1px solid black;
+  text-align: center;
+} 
+
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
